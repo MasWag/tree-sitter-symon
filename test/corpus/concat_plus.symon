@@ -1,0 +1,23 @@
+=======================================
+Concatenation plus
+=======================================
+
+signature foo {
+}
+
+foo(); foo()+
+---------------------------------------
+
+(source_file
+  (signature
+    (identifier))
+  (expr
+    (concat
+      (expr
+        (atomic
+          (identifier)))
+      (expr
+        (kleene_plus
+          (expr
+            (atomic
+              (identifier))))))))

@@ -1,0 +1,31 @@
+=======================================
+Time restriction concatenation
+=======================================
+
+signature foo {
+}
+
+foo(); (foo())%(0, 5)
+---------------------------------------
+
+(source_file
+  (signature
+    (identifier))
+  (expr
+    (concat
+      (expr
+        (atomic
+          (identifier)))
+      (expr
+        (time_restriction
+          (expr
+            (paren_expr
+              (expr
+                (atomic
+                  (identifier)))))
+          (timing_constraint
+            (intervals
+              (numeric_expr
+                (number))
+              (numeric_expr
+                (number)))))))))
