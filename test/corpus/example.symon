@@ -1,0 +1,45 @@
+var {
+    longest: param;
+    total: number;
+    count: number;
+}
+
+init {
+     total = 0 &&
+     count = 0
+}
+
+signature person {
+    name: string;
+    age: number;
+}
+
+signature foo {    
+    bar: string;
+    buz: string;
+    age: number;
+}
+
+expr foo {
+    bar();
+    fuga();
+    piyo();
+    person() || hoge();
+    person( name, age | name != "Tom" && age > 10 | total := 0 ; count := 0 );
+    person%(0, 10);
+    person%(> 10)
+}
+
+expr hoge {
+    person( name, age | name != "Tom" && age > 10 | total := 0 ; count := 0);
+    person( name, age | name == "Bob" | total := total + age );
+    person( name, age | name == "Alice" );
+    person( name, age) || foo(bar, buz, age);
+    person( name, age) && (person( name, age); foo(bar, buz, age)*);
+    person(name, age)%(0,10);
+    person(name, age)%(>longest);
+    ((person( name, age); foo(bar, buz, age)?)*)%(0,10)
+}
+
+# The main expression
+(hoge; person( name, age))*

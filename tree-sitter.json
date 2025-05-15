@@ -1,0 +1,40 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "symon",
+      "camelcase": "Symon",
+      "title": "SyMon",
+      "scope": "source.symon",
+      "file-types": [
+        "symon"
+      ],
+      "injection-regex": "^symon$",
+      "class-name": "TreeSitterSymon"
+    }
+  ],
+  "metadata": {
+    "version": "0.0.1",
+    "license": "GPLv3",
+    "description": "High-level language for a symbolic monitor --- SyMon",
+    "authors": [
+      {
+        "name": "Masaki Waga",
+        "email": "masakiwaga@gmail.com",
+        "url": "https://www.fos.kuis.kyoto-u.ac.jp/~mwaga/"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/MasWag/SyMon"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": false
+  }
+}
