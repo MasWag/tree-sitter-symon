@@ -102,6 +102,11 @@ module.exports = grammar({
       $.kleene_star,
       $.kleene_plus,
       $.within,
+      $.optional_block,
+      $.zero_or_more,
+      $.one_or_more,
+      $.one_of,
+      $.all_of,
       $.time_restriction,
       $.paren_expr
     ),
@@ -244,6 +249,43 @@ module.exports = grammar({
       '||',
       $.expr
     )),
+
+    optional_block: $ => seq(
+      'optional',
+      '{',
+      $.expr,
+      '}'
+    ),
+
+    zero_or_more: $ => seq(
+      'zero_or_more',
+      '{',
+      $.expr,
+      '}'
+    ),
+
+    one_or_more: $ => seq(
+      'one_or_more',
+      '{',
+      $.expr,
+      '}'
+    ),
+
+    one_of: $ => seq(
+      'one_of',
+      '{',
+      $.expr,
+      '}',
+      repeat1(seq('or', '{', $.expr, '}'))
+    ),
+
+    all_of: $ => seq(
+      'all_of',
+      '{',
+      $.expr,
+      '}',
+      repeat1(seq('and', '{', $.expr, '}'))
+    ),
 
     within: $ => seq(
       'within',
