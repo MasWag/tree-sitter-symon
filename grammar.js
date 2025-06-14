@@ -108,6 +108,7 @@ module.exports = grammar({
       $.one_of,
       $.all_of,
       $.time_restriction,
+      $.ignore,
       $.paren_expr
     ),
 
@@ -296,6 +297,19 @@ module.exports = grammar({
     ),
 
     time_restriction: $ => prec.right(5, seq($.expr, '%', $.timing_constraint)),
+
+    ignore: $ => seq(
+      'ignore',
+      $.identifier_list,
+      '{',
+      $.expr,
+      '}'
+    ),
+
+    identifier_list: $ => seq(
+      $.identifier,
+      repeat(seq(',', $.identifier))
+    ),
 
     paren_expr: $ => seq(
       '(',

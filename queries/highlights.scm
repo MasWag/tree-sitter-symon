@@ -14,7 +14,7 @@
 
 ;; 5. Keywords
 ([
-  "var" "init" "signature" "expr" "within" "optional" "zero_or_more" "one_or_more" "one_of" "or" "all_of" "and"
+  "var" "init" "signature" "expr" "within" "optional" "zero_or_more" "one_or_more" "one_of" "or" "all_of" "and" "ignore"
  ] @keyword)
 
 ;; 6. Operators
