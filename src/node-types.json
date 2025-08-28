@@ -302,21 +302,6 @@
     }
   },
   {
-    "type": "identifier_list",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "identifier",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "ignore",
     "named": true,
     "fields": {},
@@ -326,10 +311,6 @@
       "types": [
         {
           "type": "expr",
-          "named": true
-        },
-        {
-          "type": "identifier_list",
           "named": true
         }
       ]
@@ -850,11 +831,11 @@
   },
   {
     "type": "number",
-    "named": false
+    "named": true
   },
   {
     "type": "number",
-    "named": true
+    "named": false
   },
   {
     "type": "one_of",

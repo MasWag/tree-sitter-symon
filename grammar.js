@@ -303,7 +303,7 @@ module.exports = grammar({
 
     ignore: $ => seq(
       'ignore',
-      $.identifier_list,
+      $.expr,
       '{',
       $.expr,
       '}'

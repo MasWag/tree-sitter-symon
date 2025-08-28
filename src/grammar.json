@@ -1206,7 +1206,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "identifier_list"
+          "name": "expr"
         },
         {
           "type": "STRING",
