@@ -23,11 +23,11 @@ module.exports = grammar({
       $.expr
     ),
 
-    type: $ => choice(
-      'string',
-      'number'
-    ),
-
+    /**
+     * Variable declarations
+     *
+     * This block is used to define timing parameters, string parameters/variables, and numeric parameters/variables.
+     */
     variables: $ => seq(
       'var',
       '{',
@@ -53,6 +53,9 @@ module.exports = grammar({
       '}'
     ),
 
+    /**
+     * Signature declaration
+     */
     signature: $ => seq(
       'signature',
       $.identifier,
@@ -317,11 +320,7 @@ module.exports = grammar({
       ')'
     ),
 
-    comment: $ => /#.*/,
-
-    line_comment: $ => prec.right(choice(
-      $.comment
-    ))
+    line_comment: $ => /#.*/
   },
 
   extras: $ => [/\s/, $.line_comment]

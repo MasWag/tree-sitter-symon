@@ -49,19 +49,6 @@
         }
       ]
     },
-    "type": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "string"
-        },
-        {
-          "type": "STRING",
-          "value": "number"
-        }
-      ]
-    },
     "variables": {
       "type": "SEQ",
       "members": [
@@ -1277,22 +1264,9 @@
         }
       ]
     },
-    "comment": {
+    "line_comment": {
       "type": "PATTERN",
       "value": "#.*"
-    },
-    "line_comment": {
-      "type": "PREC_RIGHT",
-      "value": 0,
-      "content": {
-        "type": "CHOICE",
-        "members": [
-          {
-            "type": "SYMBOL",
-            "name": "comment"
-          }
-        ]
-      }
     }
   },
   "extras": [
