@@ -166,7 +166,7 @@ module.exports = grammar({
     assignment: $ => seq(
       $.identifier,
       ':=',
-      $.numeric_expr
+      choice($.string, $.numeric_expr)
     ),
 
     numeric_expr: $ => prec(1, choice(
