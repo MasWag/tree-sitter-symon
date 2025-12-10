@@ -613,8 +613,17 @@
           "value": ":="
         },
         {
-          "type": "SYMBOL",
-          "name": "numeric_expr"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "string"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "numeric_expr"
+            }
+          ]
         }
       ]
     },
