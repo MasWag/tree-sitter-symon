@@ -50,4 +50,4 @@ This project is licensed under the Apache 2.0 License.
 Development notes
 -----------------
 
-`src/` is generated code. When making grammar changes, edit `grammar.js` and then regenerate the parser (for example with `npx tree-sitter generate`). Please do not modify files under `src/` directly because those edits will be overwritten the next time the parser is generated.
+`src/` is generated code. When making grammar changes, edit `grammar.js` and then regenerate the parser with `tree-sitter generate --abi 14` (for example via `npx tree-sitter generate --abi 14`). Please do not modify files under `src/` directly because those edits will be overwritten the next time the parser is generated.
