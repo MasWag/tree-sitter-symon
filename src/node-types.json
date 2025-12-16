@@ -44,6 +44,10 @@
         {
           "type": "numeric_expr",
           "named": true
+        },
+        {
+          "type": "string",
+          "named": true
         }
       ]
     }
