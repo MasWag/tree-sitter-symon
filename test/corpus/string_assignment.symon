@@ -1,0 +1,28 @@
+=======================================
+String assignment
+=======================================
+
+var {
+   v: string;
+}
+
+signature foo {
+}
+
+foo( | | string := "bar")
+---------------------------------------
+
+(source_file
+  (variables
+    (string_definition
+      (identifier)))
+  (signature
+    (identifier))
+  (expr
+    (atomic
+      (identifier)
+        (guard_block
+          (assignment_list
+            (assignment
+              (identifier)
+              (string)))))))
