@@ -1,0 +1,19 @@
+{
+  "$schema": "https://raw.githubusercontent.com/ribru17/ts_query_ls/refs/heads/master/schemas/config.json",
+  "parser_install_directories": ["."],
+  "valid_captures": {
+    "highlights": {
+      "comment": "Comment",
+      "string": "String literal",
+      "type": "Type keyword",
+      "constant": "Constant or numeric literal",
+      "number": "Numeric literal",
+      "keyword": "Keyword",
+      "operator": "Operator",
+      "punctuation.bracket": "Bracket punctuation",
+      "punctuation.delimiter": "Delimiter punctuation",
+      "variable": "Variable or identifier",
+      "variable.parameter": "Parameter-like identifier"
+    }
+  }
+}

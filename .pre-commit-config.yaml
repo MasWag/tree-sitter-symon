@@ -1,0 +1,16 @@
+repos:
+  - repo: local
+    hooks:
+      - id: ts-query-format-check
+        name: Check tree-sitter query formatting
+        entry: ts_query_ls format --check ./queries
+        language: system
+        pass_filenames: false
+        files: '^queries/.*\.scm$'
+
+      - id: ts-query-lint
+        name: Lint tree-sitter queries
+        entry: ts_query_ls lint ./queries
+        language: system
+        pass_filenames: false
+        files: '^queries/.*\.scm$'
