@@ -1,5 +1,4 @@
 ; Indentation rules for SyMon.
-
 ; Comments should keep ordinary comment indentation behavior.
 (line_comment) @indent.auto
 
@@ -34,5 +33,8 @@
 "}" @indent.branch
 
 ; symon-mode explicitly dedents closing ")" for half_guard and intervals.
-(intervals ")" @indent.branch)
-(half_guard ")" @indent.branch)
+(intervals
+  ")" @indent.branch)
+
+(half_guard
+  ")" @indent.branch)
