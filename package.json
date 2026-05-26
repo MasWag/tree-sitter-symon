@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "High-level language for a symbolic monitor --- SyMon",
   "repository": "https://github.com/maswag/symon",
-  "license": "GPLv3",
+  "license": "MIT",
   "author": {
     "name": "Masaki Waga",
     "email": "masakiwaga@gmail.com",
