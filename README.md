@@ -45,7 +45,7 @@ By default, the headers and parser will be installed under `/usr/local/include/t
 License
 -------
 
-This project is licensed under the Apache 2.0 License.
+This project is licensed under the MIT License.
 
 Development notes
 -----------------

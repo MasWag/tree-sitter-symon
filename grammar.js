@@ -1,7 +1,7 @@
 /**
  * @file High-level language for a symbolic monitor --- SyMon
  * @author Masaki Waga <masakiwaga@gmail.com>
- * @license Apache2.0
+ * @license MIT
  */
 
 /// <reference types="tree-sitter-cli/dsl" />
